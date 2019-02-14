@@ -284,4 +284,9 @@ def main():
     print("Day 30 =", Day_30)
     print("Day 31 =", Day_31)
     
+
+    print("Percentage of 3xx codes =", ThreeXXCount / count)
+    print("Percentage of 4xx codes =", FourXXCount / count)
+
+
 main()
