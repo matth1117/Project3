@@ -241,7 +241,7 @@ def main():
 
 
 
-    print("Total number of requests =",count)
+    print("\n\nTotal number of requests =",count)
 
     print("\nNumber of requests in January =", JanCount)
     print("Number of requests in February =", FebCount)
@@ -296,10 +296,10 @@ def main():
     print("Day 31 =", Day_31)
     
 
-    print("\nPercentage of 3xx codes =", ThreeXXCount / count)
-    print("Percentage of 4xx codes =", FourXXCount / count)
+    print("\nPercentage of 3xx codes = ", "{:.4%}".format(ThreeXXCount / count))
+    print("Percentage of 4xx codes =", "{:.4%}".format(FourXXCount / count))
 
-    print("Total line errors =", LineErrors)
+    print("\nTotal line errors =", LineErrors)
 
 
-main()
+main()  
