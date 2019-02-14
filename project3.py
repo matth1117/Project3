@@ -6,7 +6,7 @@ def main():
     data = urllib.request.urlopen('https://s3.amazonaws.com/tcmg476/http_access_log')
     count = 0
     txtlist = list()
-    regex = '([(\d\.)]+) - - \[(.*?)\] "(.*?)" (\d+) - "(.*?)" "(.*?)"'
+    regex = '(.*?) - (.*) \[(.*?)\] (.*?) (\d+) (.)'
 
     print("Running...")
     
