@@ -75,7 +75,6 @@ def main():
 
         print("Number of requests in October '94 =", Oct94Count)
 
-        #txtlist.append(line, sep='/n')
 
 
     print("Total number of requests =",count)
