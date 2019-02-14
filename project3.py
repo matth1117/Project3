@@ -57,6 +57,9 @@ def main():
     NovCount = 0
     DecCount = 0
 
+    ThreeXXCount = 0
+    FourXXCount = 0
+
     txtlist = list()
 
     regex = '(.*?) - (.*) \[(.*?)\] (.*?) (\d+) (\d+)'
@@ -219,6 +222,11 @@ def main():
             DecCount += 1
 
 
+        #3xx & 4xx CODE COUNT
+        if (txtlist[count-1][4][0] == '3'):
+            ThreeXXCount += 1
+        if (txtlist[count-1][4][0]) == '4'):
+            FourXXCount += 1
 
 
 
