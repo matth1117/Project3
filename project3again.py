@@ -295,9 +295,11 @@ def main():
     print("Day 30 =", Day_30)
     print("Day 31 =", Day_31)
     
-
+    #formating percentages
     print("\nPercentage of 3xx codes = ", "{:.4%}".format(ThreeXXCount / count))
-    print("Percentage of 4xx codes =", "{:.4%}".format(FourXXCount / count))
+    print("Percentage of 4xx codes =", "{:.4%}".format((LineErrors + FourXXCount) / count))
+    #print("3xx =", ThreeXXCount)
+    #print("4xx =", FourXXCount)
 
     print("\nTotal line errors =", LineErrors)
 
