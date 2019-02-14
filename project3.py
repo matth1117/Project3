@@ -225,7 +225,7 @@ def main():
         #3xx & 4xx CODE COUNT
         if (txtlist[count-1][4][0] == '3'):
             ThreeXXCount += 1
-        if (txtlist[count-1][4][0]) == '4'):
+        if (txtlist[count-1][4][0] == '4'):
             FourXXCount += 1
 
 
