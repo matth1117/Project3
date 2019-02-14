@@ -2,9 +2,11 @@ def main():
     import urllib.request
     import re
 
+    #link to the url with the lines of data
     data = urllib.request.urlopen('https://s3.amazonaws.com/tcmg476/http_access_log')
     count = 0
 
+    #all of the counters/lists to be used
     Day_1 = 0
     Day_2 = 0
     Day_3 = 0
@@ -64,14 +66,18 @@ def main():
 
     txtlist = list()
 
+    #regex to match the lines of perfect lines of data
     regex = '(.*?) - (.*) \[(.*?)\] (.*?) (\d+) (\d+)'
 
+    #tell the user whats going on
     print("Running...")
     
+    #reading each line & counting for each line to see total amount of lines
     for line in data:
 
         count += 1
 
+        #try/except for lines that are not matching regex
         try:
             #line = line.strip()  
                     
@@ -240,7 +246,7 @@ def main():
             LineErrors += 1
 
 
-
+    #print literally everything to the user
     print("\n\nTotal number of requests =",count)
 
     print("\nNumber of requests in January =", JanCount)
