@@ -1,6 +1,5 @@
 def main():
     import urllib.request
-
     import re
 
     data = urllib.request.urlopen('https://s3.amazonaws.com/tcmg476/http_access_log')
@@ -11,26 +10,19 @@ def main():
     print("Running...")
     
     for line in data:
-        line = line.strip()           
-        #print(line)
+        #line = line.strip()  
+                 
         count += 1
-
         line = line.decode('utf-8')
-
         LineMatch = re.match(regex, line).groups()
 
+        txtlist.append(LineMatch)
+
         print (count, LineMatch)
-
-        print ()
-
-        if AttributeError == True:
-            print ("Attribute error")
-            continue
+        print (txtlist[count-1][2])
 
         #txtlist.append(line, sep='/n')
 
-
-    #print (txtlist)
 
     print("Total number of requests =",count)
     
