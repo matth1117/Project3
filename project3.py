@@ -6,7 +6,7 @@ def main():
     data = urllib.request.urlopen('https://s3.amazonaws.com/tcmg476/http_access_log')
     count = 0
     txtlist = list()
-    regex = '(.*?) - (.*) \[(.*?)\] (.*?) (\d+) (.)'
+    regex = '(.*?) - (.*) \[(.*?)\] (.*?) (\d+) (\d+)'
 
     print("Running...")
     
@@ -15,7 +15,17 @@ def main():
         #print(line)
         count += 1
 
-        print (re.match(regex, line).groups())     
+        line = line.decode('utf-8')
+
+        LineMatch = re.match(regex, line).groups()
+
+        print (count, LineMatch)
+
+        print ()
+
+        if AttributeError == True:
+            print ("Attribute error")
+            continue
 
         #txtlist.append(line, sep='/n')
 
